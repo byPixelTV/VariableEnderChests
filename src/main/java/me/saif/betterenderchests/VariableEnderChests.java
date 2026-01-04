@@ -13,7 +13,6 @@ import me.saif.betterenderchests.data.database.SQLDatabase;
 import me.saif.betterenderchests.data.database.SQLiteDatabase;
 import me.saif.betterenderchests.enderchest.EnderChestClickListener;
 import me.saif.betterenderchests.enderchest.EnderChestManager;
-import me.saif.betterenderchests.hooks.ChestSortHook;
 import me.saif.betterenderchests.hooks.InteractiveChatHook;
 import me.saif.betterenderchests.hooks.PAPIEnderChestHook;
 import me.saif.betterenderchests.hooks.ShowItemHook;
@@ -165,8 +164,6 @@ public final class VariableEnderChests extends JavaPlugin {
             this.enderChestHook = new PAPIEnderChestHook(this);
             this.enderChestHook.register();
         }
-
-        ChestSortHook.hook();
         new InteractiveChatHook(this);
         new ShowItemHook(this);
     }
