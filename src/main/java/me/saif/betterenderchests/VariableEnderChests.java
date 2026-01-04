@@ -2,10 +2,7 @@ package me.saif.betterenderchests;
 
 import de.tr7zw.changeme.nbtapi.utils.MinecraftVersion;
 import me.saif.betterenderchests.command.CommandManager;
-import me.saif.betterenderchests.command.commands.ClearEnderChestCommand;
-import me.saif.betterenderchests.command.commands.ConversionCommand;
-import me.saif.betterenderchests.command.commands.EnderChestCommand;
-import me.saif.betterenderchests.command.commands.EnderChestDebugCommand;
+import me.saif.betterenderchests.command.commands.*;
 import me.saif.betterenderchests.converters.ConverterManager;
 import me.saif.betterenderchests.data.*;
 import me.saif.betterenderchests.data.database.MySQLDatabase;
@@ -150,6 +147,7 @@ public final class VariableEnderChests extends JavaPlugin {
         this.commandManager.registerCommand(new ClearEnderChestCommand(this));
         this.commandManager.registerCommand(new ConversionCommand(this));
         this.commandManager.registerCommand(new EnderChestDebugCommand(this));
+        this.commandManager.registerCommand(new RestoreEnderChestCommand(this));
 
         List<String> aliases = this.getConfig().getStringList("open-enderchest-commands");
 
